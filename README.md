@@ -94,4 +94,4 @@ python applications/propagate_to_images.py --ckpt celeba --real_data_path data/m
 ```
 Or if you feel complicate on this job, you can try this [link](https://colab.research.google.com/drive/1JkUjhTjR8MyLxwarJjqnh836BICfocTu?usp=sharing) by office.
 
-Just for fun for yourself! :raised_hands::fireworks::rocket:
+:raised_hands::fireworks::rocket:Just for fun for yourself! :raised_hands::fireworks::rocket:
