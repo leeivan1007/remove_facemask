@@ -14,7 +14,7 @@ So If you have fun or intersting with our project.
 
 Please give the :star: we will appreciate it.:relaxed:
 
-Also you can reference our ![slide](https://docs.google.com/presentation/d/181eFUYPN-8y2xmDHlhNQoEO019DoeQBaOG5oyBcysgQ/edit?usp=sharing).
+Also you can reference our [slide](https://docs.google.com/presentation/d/181eFUYPN-8y2xmDHlhNQoEO019DoeQBaOG5oyBcysgQ/edit?usp=sharing).
 
 ## Architecture
 
@@ -34,7 +34,7 @@ There are four parts you can enjoy with them.
 
 ## 3. Generate the blank
 
-We reference the project ![generative_inpainting](https://github.com/JiahuiYu/generative_inpainting). 
+We reference the project [generative_inpainting](https://github.com/JiahuiYu/generative_inpainting). 
 
 But it's the older version. So it need some steps to update the version if you 
 
