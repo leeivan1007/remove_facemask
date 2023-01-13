@@ -84,7 +84,7 @@ export PYTHONPATH="${PYTHONPATH}:${PWD}"
 python prepare_data.py --input_is_lmdb --lsun_category cat --out data/lsun_cats --size 512 --max_images 10000
 python applications/propagate_to_images.py --ckpt cat --real_data_path data/lsun_cats --real_size 512 --dset_indices 1922 2363 8558 7401 9750 7432 2105 53 1946
 ```
-If it has a issue with "GLIBCXX_3.4.29" You can try the steps from ![here](https://stackoverflow.com/questions/65349875/where-can-i-find-glibcxx-3-4-29)
+If it has a issue with "GLIBCXX_3.4.29" You can try the steps from [here](https://stackoverflow.com/questions/65349875/where-can-i-find-glibcxx-3-4-29)
 
 4.4 The the image with facemask
 It prove the human face and the mask you can use them at images folder
@@ -92,6 +92,6 @@ It prove the human face and the mask you can use them at images folder
 python prepare_data.py --path folder_of_images --out data/my_new_dataset --pad [center/border/zero] --size S # build the data
 python applications/propagate_to_images.py --ckpt celeba --real_data_path data/my_new_dataset --real_size 512 --dset_indices 0
 ```
-Or if you feel complicate on this job, you can try this ![link](https://colab.research.google.com/drive/1JkUjhTjR8MyLxwarJjqnh836BICfocTu?usp=sharing) by office.
+Or if you feel complicate on this job, you can try this [link](https://colab.research.google.com/drive/1JkUjhTjR8MyLxwarJjqnh836BICfocTu?usp=sharing) by office.
 
 Just for fun for yourself! :raised_hands::fireworks::rocket:
