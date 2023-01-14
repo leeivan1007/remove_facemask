@@ -30,9 +30,75 @@ There are four parts you can enjoy with them.
 
 ## 1. Detection the face wearing the mask.
 
-## 2. Remove the face.
+First git clone repo from yolo
 
-## 3. Generate the blank
+```
+git clone https://ultralytics.com/yolov5
+```
+
+### 1.1 Specification:
+- Mask
+- Face
+- 929 images of 2 Classes
+- Train Q’ty = 836
+- Valid Q’ty = 66
+- Test Q’ty = 27
+- images size: 1024*1024 
+- labels format: XML 
+
+### 1.2 Datasets:
+https://drive.google.com/drive/folders/1rDCEDGXvw8YS2cY7BgtQbfsjVi7fhlSm?usp=sharing
+
+
+### 1.3 Steps
+
+- Label the images [Detection]
+labelme /your/path/ --labels labels.txt --nodata --autosave
+- Press the right-click to select the rectangle
+- After you have labeled all of the images. 
+- Migrate json files to detection/labels/{face/mask} from detection/images/{face/mask}
+
+- Transfer /your/path/*.json to *.xml [Detection]
+py json_xml.py
+
+### 1.4 Start the training with Yolov5 [Detection]
+
+Run "detection.ipynb" on colab and run step by step.
+
+### 1.5 Requirment
+
+YOLOv5 🚀 requirements Usage: pip install -r requirements.txt
+
+### pip packages 
+```
+gitpython
+ipython  # interactive notebook
+matplotlib>=3.2.2
+numpy>=1.18.5
+opencv-python>=4.1.1
+Pillow>=7.1.2
+psutil  # system resources
+PyYAML>=5.3.1
+requests>=2.23.0
+scipy>=1.4.1
+thop>=0.1.1  # FLOPs computation
+torch>=1.7.0  # see https://pytorch.org/get-started/locally (recommended)
+torchvision>=0.8.1
+tqdm>=4.64.0
+tensorboard>=2.4.1
+pandas>=1.1.4
+seaborn>=0.11.0
+```
+
+
+Our weight and data split
+Can try our weight at path .\yolov5\runs\train\yolov5s_results
+
+
+
+### 2. Remove the face.
+
+### 3. Generate the blank
 
 We reference the project [generative_inpainting](https://github.com/JiahuiYu/generative_inpainting). 
 
