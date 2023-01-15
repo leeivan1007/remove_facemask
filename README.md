@@ -94,9 +94,54 @@ seaborn>=0.11.0
 Our weight and data split
 Can try our weight at path .\yolov5\runs\train\yolov5s_results
 
+### 2. Segment the mask from the face
+In this step, the objective is to remove the mask from the face.  
+To achieve that, we use U-Net (source: https://github.com/milesial/Pytorch-UNet) to segment the mask from the face and cut the segmentation part.  
+> The cutting part won't be including in this repo, you should do it yourself.
 
+#### 2.1 Environment Setup
+Run the following commands in your working directory
+> Pls read the comments first
 
-### 2. Remove the face.
+```sh
+# Clone the U-Net repo
+git clone https://github.com/milesial/Pytorch-UNet.git
+
+# Create a new conda env, you can skip this step if you don't using conda.
+conda create --name unetSeg python=3.8
+connda activate unetSeg
+
+# Install the PyTorch
+## There are different ways to install PyTorch and its dependencies (like cuda), you can choose any of them, but make sure your PyTorch version should be 1.12 or later
+## The following command is for Mac
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 -c pytorch
+
+# Install the requirements
+cd Pytorch-UNet/
+pip install -r requirements.txt
+```
+
+#### 2.2 Put the training data into the `data` folder
+The input images and target masks should be in the data/imgs and data/masks folders respectively (note that the imgs and masks folder should not contain any sub-folder or any other files, due to the greedy data-loader).
+
+> It might look like:  
+> ![](images/seg-data-folder-tree.png)  
+
+#### 2.3 Training
+Run the following commands in the `Pytorch-UNet` folder.
+```sh
+python train.py
+```
+
+#### 2.4 Testing
+```sh
+python predict.py --model checkpoints/checkpoint_epoch5.pth --input path_to_test_img.png --output result.png
+```
+Check the result.png
+
+#### 2.5 Charts for the training result
+![](images/seg-charts.png)  
+
 
 ### 3. Generate the blank
 
